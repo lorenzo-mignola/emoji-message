@@ -7,8 +7,10 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
+    "@tailwindcss/vite": "^4.0.1",
     "dotenv": "^16.4.7",
-    "hono": "^4.6.19"
+    "hono": "^4.6.19",
+    "tailwindcss": "^4.0.1"
   },
   "devDependencies": {
     "@lorenzo-mignola/eslint-config": "*",

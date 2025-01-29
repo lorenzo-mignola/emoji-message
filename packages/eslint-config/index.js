@@ -1,12 +1,3 @@
-// export default {
-//   formatters: true,
-//   typescript: true,
-//   stylistic: {
-//     indent: 2,
-//     quotes: 'single',
-//   },
-// }
-
 import antfu from '@antfu/eslint-config'
 
 export default antfu({
