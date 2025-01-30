@@ -1,24 +1,22 @@
 {
-  "name": "@lorenzo-mignola/red-client",
+  "name": "@lorenzo-mignola/client-ui",
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "module": "index.ts",
+  "main": "index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./ClientUI": "./ClientUI.vue"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build",
-    "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
-    "lint:eslint": "eslint . --fix",
-    "lint": "run-s lint:*"
+    "lint": "eslint ."
   },
   "dependencies": {
     "pinia": "^2.3.1",
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@lorenzo-mignola/client-ui": "*",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.10.7",
     "@vitejs/plugin-vue": "^5.2.1",

@@ -3,7 +3,7 @@ import { ClientUI } from '@lorenzo-mignola/client-ui'
 </script>
 
 <template>
-  <ClientUI color="red" />
+  <ClientUI color="blue" />
 </template>
 
 <style scoped></style>
