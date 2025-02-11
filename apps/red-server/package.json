@@ -7,13 +7,11 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
-    "@tailwindcss/vite": "^4.0.1",
-    "dotenv": "^16.4.7",
-    "hono": "^4.6.19",
-    "tailwindcss": "^4.0.1"
+    "dotenv": "^16.4.7"
   },
   "devDependencies": {
     "@lorenzo-mignola/eslint-config": "*",
+    "@lorenzo-mignola/server-app": "*",
     "@lorenzo-mignola/typescript-config": "*",
     "@types/node": "^20.11.17",
     "tsx": "^4.7.1"

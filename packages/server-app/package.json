@@ -1,0 +1,24 @@
+
+{
+  "name": "@lorenzo-mignola/server-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "module": "index.ts",
+  "main": "index.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@hono/node-ws": "^1.0.8",
+    "hono": "^4.6.19",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "@lorenzo-mignola/eslint-config": "*",
+    "@lorenzo-mignola/typescript-config": "*"
+  }
+}

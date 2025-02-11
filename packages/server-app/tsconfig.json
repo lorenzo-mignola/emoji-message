@@ -1,0 +1,3 @@
+{
+  "extends": "@lorenzo-mignola/typescript-config/hono",
+}
