@@ -7,6 +7,8 @@
 <script setup lang="ts">
 import { useEmojiList } from '../store/emoji-list';
 
+const props = defineProps<{ ws: WebSocket }>();
+
 const emojiList = useEmojiList();
 
 function randomPosition() {

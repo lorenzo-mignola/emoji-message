@@ -3,7 +3,9 @@ import { ClientUI } from '@lorenzo-mignola/client-ui'
 </script>
 
 <template>
-  <ClientUI color="blue" />
+  <Suspense>
+    <ClientUI color="blue" />
+  </Suspense>
 </template>
 
 <style scoped></style>

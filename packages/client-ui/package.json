@@ -13,10 +13,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "hono": "^4.7.0",
     "pinia": "^2.3.1",
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@lorenzo-mignola/server-app": "*",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.10.7",
     "@vitejs/plugin-vue": "^5.2.1",
