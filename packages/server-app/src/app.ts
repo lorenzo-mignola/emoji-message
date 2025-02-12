@@ -16,13 +16,25 @@ app.get(
   '/ws',
   upgradeWebSocket(c => {
     return {
-      onMessage(event, ws) {
+      onMessage: async (event, ws) => {
         console.log(`Message from client: ${event.data}`);
-        ws.send('Hello from server!');
+        const emoji = event.data.toString();
+        await redisClient.xAdd('emoji:list', '*', { emoji });
+
+        const stream = await redisClient.xRange('emoji:list', '-', '+');
+        const emojiList = stream.map(({message}) => message.emoji);
+
+        ws.send(emojiList.join('|'));
+      },
+      onOpen: async (event, ws) => {
+
+        const stream = await redisClient.xRange('emoji:list', '-', '+');
+        const emojiList = stream.map(({message}) => message.emoji);
+        ws.send(emojiList.join('|'));
       },
       onClose: () => {
         console.log('Connection closed');
-      }
+      },
     };
   })
 );

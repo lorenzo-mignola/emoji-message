@@ -12,11 +12,7 @@ import { useEmojiList } from '../store/emoji-list';
 const props = defineProps<{ emoji: string }>()
 const emit = defineEmits(['emojiAdd'])
 
-const { addEmoji } = useEmojiList();
-
-
 function add() {
-  addEmoji(props.emoji)
   emit('emojiAdd', props.emoji)
 }
 </script>

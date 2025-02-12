@@ -8,6 +8,13 @@
 import { useEmojiList } from '../store/emoji-list';
 
 const props = defineProps<{ ws: WebSocket }>();
+const { setEmojiList } = useEmojiList();
+
+props.ws.onmessage = (event) => {
+  const emojiListString = event.data || "";
+  const emojiList = emojiListString.split("|");
+  setEmojiList(emojiList);
+};
 
 const emojiList = useEmojiList();
 
